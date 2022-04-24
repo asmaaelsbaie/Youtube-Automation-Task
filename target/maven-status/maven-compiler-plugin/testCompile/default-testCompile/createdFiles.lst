@@ -1,0 +1,3 @@
+StepDefinitions\Search_StepDefinitions.class
+Runners\testRunner.class
+StepDefinitions\Hooks.class

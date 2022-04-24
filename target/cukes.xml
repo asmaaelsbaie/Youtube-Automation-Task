@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="47.414">
+    <testcase classname="Youtube Search Task" name="Test Case/Scenario 1" time="14.927">
+        <system-out><![CDATA[Given navigate to https://www.youtube.com/..................................passed
+When search by 'Selenium Tutorial' Keyword..................................passed
+And click on filters button.................................................passed
+Then click on Video under the Type tab......................................passed
+And get the title of the third video in results.............................passed
+And click the third video...................................................passed
+And assert that the video title in step 5 is the same title in step 6.......passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Youtube Search Task" name="Test Case/Scenario 2 -------&gt;Same as test case 1 but change the keyword to 'Test Automation Tutorial'" time="14.698">
+        <system-out><![CDATA[Given navigate to https://www.youtube.com/..................................passed
+When search by 'Test Automation Tutorial' Keyword...........................passed
+And click on filters button.................................................passed
+Then click on Video under the Type tab......................................passed
+And get the title of the third video in results.............................passed
+And click the third video...................................................passed
+And assert that the video title in step 5 is the same title in step 6.......passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Youtube Search Task" name="Test Case/Scenario 3 -------&gt;Same as test case 1 but choose the 10th video in result" time="17.431">
+        <failure message="Index 0 out of bounds for length 0" type="java.lang.IndexOutOfBoundsException"><![CDATA[Given navigate to https://www.youtube.com/..................................passed
+When search by 'Selenium Tutorial' Keyword..................................passed
+And click on filters button.................................................passed
+Then click on Video under the Type tab......................................failed
+And get the title of the 10 th video in results.............................skipped
+And click the third video...................................................skipped
+And assert that the video title in step 5 is the same title in step 6 Scenario3.skipped
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at Pages.HomePage.play_video(HomePage.java:47)
+	at StepDefinitions.Search_StepDefinitions.click_on_Video_under_the_Type_tab(Search_StepDefinitions.java:34)
+	at ✽.click on Video under the Type tab(file:///F:/iti/Testing/interview%20Projects/Task/src/main/resources/features/Search.feature:27)
+]]></failure>
+    </testcase>
+</testsuite>
